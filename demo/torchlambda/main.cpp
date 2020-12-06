@@ -41,6 +41,8 @@
 #include <torch/script.h>
 #include <torch/torch.h>
 
+using std;
+
 /*!
  *
  *            UTILITY MACROS FOR OUTPUT & RESULT PROCESSING
