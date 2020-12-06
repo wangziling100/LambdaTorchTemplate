@@ -81,7 +81,7 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
      */
 
     const auto json = Aws::Utils::Json::JsonValue{request.payload};
-    cout<< "here";
+    cout<< "here"<<endl;
 
 #ifdef VALIDATE_JSON
     if (!json.WasParseSuccessful())
@@ -90,6 +90,7 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
 #endif
 
     const auto json_view = json.View();
+    cout<< json_view.GetObject(data_field)<<endl;
 
 #ifdef VALIDATE_FIELD
     if (!json_view.KeyExists(data_field))
