@@ -1,0 +1,15 @@
+{
+  "name": "lambda-template",
+  "version": "1.0.0",
+  "description": "AWS Lambda Template",
+  "main": "index.js",
+  "repository": "https://github.com/wangziling100/Lambda-Template",
+  "author": "Xingbo Wang",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest test"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}

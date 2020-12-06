@@ -1,0 +1,10 @@
+node_modules
+*.deb
+**/policy/*
+policy
+.env
+clean.sh
+create_user.sh
+del_sec.sh
+new_sec.sh
+gen_encrypted.py
