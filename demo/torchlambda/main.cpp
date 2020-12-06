@@ -73,7 +73,7 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
 #endif
 ) {
     return aws::lambda_runtime::invocation_response::success(
-        Aws::Utils::Json::JsonValue{}.WithArray("output", "hello")
+        Aws::Utils::Json::JsonValue{}.WithString("output", "hello")
             .View()
             .WriteCompact(),
         "application/json"
