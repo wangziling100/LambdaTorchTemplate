@@ -73,7 +73,11 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
 #endif
 ) {
     return aws::lambda_runtime::invocation_response::success(
-        Aws::Utils::Json::JsonValue{})
+        Aws::Utils::Json::JsonValue{}.WithArray("output", "hello")
+            .View()
+            .WriteCompact(),
+        "application/json"
+    );
     const Aws::String data_field{ "data" };
 
     /*!
