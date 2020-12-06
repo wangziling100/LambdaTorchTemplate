@@ -79,6 +79,7 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
      */
 
     const auto json = Aws::Utils::Json::JsonValue{request.payload};
+    cout<< "here";
 
 #ifdef VALIDATE_JSON
     if (!json.WasParseSuccessful())
