@@ -41,7 +41,7 @@
 #include <torch/script.h>
 #include <torch/torch.h>
 
-using std;
+using namespace std;
 
 /*!
  *
