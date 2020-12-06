@@ -72,6 +72,8 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
         const Aws::Utils::Base64::Base64 &transformer
 #endif
 ) {
+    return aws::lambda_runtime::invocation_response::success(
+        Aws::Utils::Json::JsonValue{})
     const Aws::String data_field{ "data" };
 
     /*!
@@ -90,7 +92,7 @@ handler(std::shared_ptr<torch::jit::script::Module> &module,
 #endif
 
     const auto json_view = json.View();
-    cout<< json_view.GetObject(data_field)<<endl;
+    //cout<< json_view.GetObject(data_field)<<endl;
 
 #ifdef VALIDATE_FIELD
     if (!json_view.KeyExists(data_field))
