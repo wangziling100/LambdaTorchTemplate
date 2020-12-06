@@ -15,7 +15,7 @@ Resources:
       CodeUri: .
       Handler: torchlambda
       Runtime: provided
-      MemorySize: 256
+      MemorySize: 512
       Events:
         Gateway:
           Type: Api
