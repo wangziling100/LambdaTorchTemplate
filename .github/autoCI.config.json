@@ -1,5 +1,10 @@
 {
     "actions":[
+        "pip install --user torchlambda",
+        "cd demo && /home/runner/.local/bin/torchlambda build ./torchlambda",
+        "mkdir dist",
+        "mv demo/torchlambda.zip dist",
+        "mv demo/model.ptc dist",
         "sam build",
         "sam local invoke \"SamDemoFunction\" -e events/event.json --env-vars env.json",
         "sam deploy"
