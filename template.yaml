@@ -16,12 +16,12 @@ Resources:
       Handler: torchlambda
       Runtime: provided
       MemorySize: 256
-      #Events:
+      Events:
         #Gateway:
-        #HttpApiEvent:
-          #Type: HttpApi
-          #Properties:
-            #Path: /samdemo
+        HttpApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /samdemo
             #Method: post
       Environment:
         Variables:
