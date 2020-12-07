@@ -6,7 +6,7 @@
 
 #define VALIDATE_JSON 
 
-#define BASE64 
+//#define BASE64 
 
 #define VALIDATE_FIELD 
 
@@ -65,7 +65,7 @@ using namespace std;
  */
 
 static aws::lambda_runtime::invocation_response
-handler(std::shared_ptr<torch::jit::script::Module> &module,
+handler(//std::shared_ptr<torch::jit::script::Module> &module,
         const aws::lambda_runtime::invocation_request &request
 #ifdef BASE64
         ,
