@@ -15,13 +15,13 @@ Resources:
       CodeUri: .
       Handler: torchlambda
       Runtime: provided
-      MemorySize: 512
+      MemorySize: 256
       Events:
         Gateway:
-          Type: Api
+          Type: HttpApi
           Properties:
             Path: /samdemo
-            Method: post
+            #Method: post
       Environment:
         Variables:
            k1: "v1"
