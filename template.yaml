@@ -21,7 +21,7 @@ Resources:
           Type: HttpApi
           Properties:
             Path: /samdemo
-            #Method: post
+            Method: post
       Environment:
         Variables:
            k1: "v1"
