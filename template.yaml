@@ -18,7 +18,7 @@ Resources:
       MemorySize: 256
       Events:
         #Gateway:
-        PostMessage:
+        SamDemoHttpApi:
           Type: HttpApi
           Properties:
             ApiId: !Ref SamDemoApi
@@ -36,7 +36,7 @@ Resources:
   SamDemoHttpApi:
     Type: AWS::Serverless::HttpApi
     Properties:
-      StageName: Test
+      StageName: Deploy
       CorsConfiguration: True
     
   ModelLayer:
