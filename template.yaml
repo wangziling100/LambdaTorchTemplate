@@ -21,7 +21,7 @@ Resources:
         SamDemoHttpApi:
           Type: HttpApi
           Properties:
-            ApiId: !Ref SamDemoApi
+            ApiId: !Ref SamDemoHttpApi
             Path: /samdemo
             Method: POST
       Environment:
