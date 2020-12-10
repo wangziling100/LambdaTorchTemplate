@@ -18,11 +18,12 @@ Resources:
       MemorySize: 256
       Events:
         #Gateway:
-        HttpApiEvent:
+        PostMessage:
           Type: HttpApi
           Properties:
+            ApiId: !Ref SamDemoApi
             Path: /samdemo
-            #Method: post
+            Method: POST
       Environment:
         Variables:
            k1: "v1"
@@ -31,6 +32,12 @@ Resources:
         - !Ref ModelLayer
     Metadata:
       BuildMethod: makefile
+
+  SamDemoHttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: Test
+      CorsConfiguration: True
     
   ModelLayer:
     Type: AWS::Serverless::LayerVersion
